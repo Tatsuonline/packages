@@ -1,0 +1,31 @@
+# Maintainer: Alexander Phillips <mail@alexanderphillips.net>
+pkgname=suboptimal
+pkgver=1.0
+pkgrel=1
+epoch=
+pkgdesc="The optimal subtitle finder."
+arch=("x86_64")
+url="https://github.com/Tatsuonline/suboptimal"
+license=('GPL3')
+groups=()
+depends=('openssl')
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=("$pkgname-$pkgver.tar.gz")
+noextract=()
+md5sums=('58bd4a71824d191502d56e9a6314b191')
+validpgpkeys=()
+
+package() {
+	cd "$pkgname-$pkgver"
+	mkdir -p $pkgdir/usr/bin
+	cp suboptimal $pkgdir/usr/bin
+}
